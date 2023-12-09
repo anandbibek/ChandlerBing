@@ -17,7 +17,15 @@ struct ContentView: View {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        VStack {
+                            Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                            Text("Hello")
+                            Button(action: {
+                                BingPictureManager().fetchLastWallpaper(atRegin: "IN")
+                            }) {
+                                Text("Download")
+                            }
+                        }
                     } label: {
                         Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
                     }

@@ -15,6 +15,7 @@
 		19D17D8D2B1FA279001526A6 /* ChandlerBingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D17D8C2B1FA279001526A6 /* ChandlerBingTests.swift */; };
 		19D17D972B1FA279001526A6 /* ChandlerBingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D17D962B1FA279001526A6 /* ChandlerBingUITests.swift */; };
 		19D17D992B1FA279001526A6 /* ChandlerBingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D17D982B1FA279001526A6 /* ChandlerBingUITestsLaunchTests.swift */; };
+		19D17DA72B1FA577001526A6 /* WallpaperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D17DA62B1FA577001526A6 /* WallpaperManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		19D17D922B1FA279001526A6 /* ChandlerBingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChandlerBingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D17D962B1FA279001526A6 /* ChandlerBingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChandlerBingUITests.swift; sourceTree = "<group>"; };
 		19D17D982B1FA279001526A6 /* ChandlerBingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChandlerBingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		19D17DA62B1FA577001526A6 /* WallpaperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		19D17D6C2B1FA278001526A6 = {
 			isa = PBXGroup;
 			children = (
+				19D17DA52B1FA280001526A6 /* ChandlerBingLoginItem */,
 				19D17D772B1FA279001526A6 /* ChandlerBing */,
 				19D17D8B2B1FA279001526A6 /* ChandlerBingTests */,
 				19D17D952B1FA279001526A6 /* ChandlerBingUITests */,
@@ -103,6 +106,7 @@
 				19D17D7E2B1FA279001526A6 /* Assets.xcassets */,
 				19D17D832B1FA279001526A6 /* ChandlerBing.entitlements */,
 				19D17D802B1FA279001526A6 /* Preview Content */,
+				19D17DA62B1FA577001526A6 /* WallpaperManager.swift */,
 			);
 			path = ChandlerBing;
 			sourceTree = "<group>";
@@ -130,6 +134,13 @@
 				19D17D982B1FA279001526A6 /* ChandlerBingUITestsLaunchTests.swift */,
 			);
 			path = ChandlerBingUITests;
+			sourceTree = "<group>";
+		};
+		19D17DA52B1FA280001526A6 /* ChandlerBingLoginItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChandlerBingLoginItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19D17DA72B1FA577001526A6 /* WallpaperManager.swift in Sources */,
 				19D17D7B2B1FA279001526A6 /* ContentView.swift in Sources */,
 				19D17D7D2B1FA279001526A6 /* Item.swift in Sources */,
 				19D17D792B1FA279001526A6 /* ChandlerBingApp.swift in Sources */,
