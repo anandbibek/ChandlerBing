@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AppKit
 
 enum DataError: Error {
     case invalidURL
@@ -90,5 +91,19 @@ class BingAPI {
             print("Image downloaded \(url.absoluteString)")
             self.storage.saveImage(data: data, atRegion: atRegion, onDate: date)
         }.resume()
+    }
+    
+    func setWallpaper(imageInfo: ImageInfo, atRegion: String) {
+        let date = imageInfo.enddate
+        fetchImage(imageInfo: imageInfo, atRegion: atRegion)
+        if storage.imageExists(atRegion: atRegion, onDate: date) {
+            NSScreen.screens.forEach({ (screen) in
+                try? NSWorkspace.shared.setDesktopImageURL(
+                    URL(string: storage.buildImagePath(onDate: date, atRegion: atRegion))!,
+                    for: screen,
+                    options: [:]
+                )
+            })
+        }
     }
 }

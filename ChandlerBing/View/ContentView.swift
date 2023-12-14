@@ -20,10 +20,24 @@ struct ContentView: View {
                         VStack {
                             Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
                             
-                            Button(action: {
-                                BingPictureManager().downloadData()
-                            }) {
-                                Text("Download New")
+                            
+                            
+                            HStack {
+                                Button(action: {
+                                    BingPictureManager().downloadData()
+                                }) {
+                                    Text("<")
+                                }
+                                Button(action: {
+                                    BingPictureManager().downloadData()
+                                }) {
+                                    Text("Set Wallpaper")
+                                }
+                                Button(action: {
+                                    BingPictureManager().downloadData()
+                                }) {
+                                    Text(">")
+                                }
                             }
                             
                             Button(action: {

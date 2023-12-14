@@ -18,7 +18,8 @@ class BingPictureManager {
             result in
             switch result {
             case .success(let response):
-                BingAPI.shared.fetchImage(imageInfo: response.images[0], atRegion: region)
+                let imageInfo = response.images[0]
+                BingAPI.shared.setWallpaper(imageInfo: imageInfo, atRegion: region)
             case .failure(let error):
                 print(error)
             }

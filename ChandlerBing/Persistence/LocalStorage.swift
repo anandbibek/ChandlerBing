@@ -75,14 +75,14 @@ class LocalStorage {
         }
     }
     
-    fileprivate func buildDataPath(onDate: String, atRegion: String) -> String {
+    func buildDataPath(onDate: String, atRegion: String) -> String {
         if atRegion == "" {
             return "\(cacheDir)/.json"
         }
         return "\(cacheDir)/\(onDate)_\(atRegion).json"
     }
     
-    fileprivate func buildImagePath(onDate: String, atRegion: String) -> String {
+    func buildImagePath(onDate: String, atRegion: String) -> String {
         if atRegion == "" {
             return "\(cacheDir)/\(onDate).jpg"
         }
