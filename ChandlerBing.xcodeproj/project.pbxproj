@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190973B52B277EBF00815F17 /* BingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190973B42B277EBF00815F17 /* BingAPI.swift */; };
+		190973B72B27812700815F17 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190973B62B27812700815F17 /* ImageModel.swift */; };
+		197CF38D2B262416008A5DA0 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CF38C2B262416008A5DA0 /* LocalStorage.swift */; };
+		197CF3902B262C87008A5DA0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CF38F2B262C87008A5DA0 /* Constants.swift */; };
+		199CE5E12B2A2B9F007819FC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199CE5E02B2A2B9F007819FC /* Helper.swift */; };
 		19D17D792B1FA279001526A6 /* ChandlerBingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D17D782B1FA279001526A6 /* ChandlerBingApp.swift */; };
 		19D17D7B2B1FA279001526A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D17D7A2B1FA279001526A6 /* ContentView.swift */; };
 		19D17D7D2B1FA279001526A6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D17D7C2B1FA279001526A6 /* Item.swift */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		190973B42B277EBF00815F17 /* BingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingAPI.swift; sourceTree = "<group>"; };
+		190973B62B27812700815F17 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		197CF38C2B262416008A5DA0 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		197CF38F2B262C87008A5DA0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		199CE5E02B2A2B9F007819FC /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		19D17D752B1FA279001526A6 /* ChandlerBing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChandlerBing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D17D782B1FA279001526A6 /* ChandlerBingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChandlerBingApp.swift; sourceTree = "<group>"; };
 		19D17D7A2B1FA279001526A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,10 +86,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190973B32B277E9300815F17 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				190973B42B277EBF00815F17 /* BingAPI.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		197CF3882B2622F9008A5DA0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				19D17DA62B1FA577001526A6 /* WallpaperManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		197CF3892B262309008A5DA0 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				197CF38C2B262416008A5DA0 /* LocalStorage.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		197CF38A2B26234D008A5DA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19D17D7C2B1FA279001526A6 /* Item.swift */,
+				190973B62B27812700815F17 /* ImageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		197CF38B2B262359008A5DA0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19D17D7A2B1FA279001526A6 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		197CF38E2B262B32008A5DA0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				197CF38F2B262C87008A5DA0 /* Constants.swift */,
+				199CE5E02B2A2B9F007819FC /* Helper.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		19D17D6C2B1FA278001526A6 = {
 			isa = PBXGroup;
 			children = (
-				19D17DA52B1FA280001526A6 /* ChandlerBingLoginItem */,
 				19D17D772B1FA279001526A6 /* ChandlerBing */,
 				19D17D8B2B1FA279001526A6 /* ChandlerBingTests */,
 				19D17D952B1FA279001526A6 /* ChandlerBingUITests */,
@@ -100,13 +159,16 @@
 		19D17D772B1FA279001526A6 /* ChandlerBing */ = {
 			isa = PBXGroup;
 			children = (
+				190973B32B277E9300815F17 /* Api */,
+				197CF38E2B262B32008A5DA0 /* Util */,
+				197CF38B2B262359008A5DA0 /* View */,
+				197CF38A2B26234D008A5DA0 /* Model */,
+				197CF3892B262309008A5DA0 /* Persistence */,
+				197CF3882B2622F9008A5DA0 /* Service */,
 				19D17D782B1FA279001526A6 /* ChandlerBingApp.swift */,
-				19D17D7A2B1FA279001526A6 /* ContentView.swift */,
-				19D17D7C2B1FA279001526A6 /* Item.swift */,
 				19D17D7E2B1FA279001526A6 /* Assets.xcassets */,
 				19D17D832B1FA279001526A6 /* ChandlerBing.entitlements */,
 				19D17D802B1FA279001526A6 /* Preview Content */,
-				19D17DA62B1FA577001526A6 /* WallpaperManager.swift */,
 			);
 			path = ChandlerBing;
 			sourceTree = "<group>";
@@ -134,13 +196,6 @@
 				19D17D982B1FA279001526A6 /* ChandlerBingUITestsLaunchTests.swift */,
 			);
 			path = ChandlerBingUITests;
-			sourceTree = "<group>";
-		};
-		19D17DA52B1FA280001526A6 /* ChandlerBingLoginItem */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ChandlerBingLoginItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,10 +328,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				190973B52B277EBF00815F17 /* BingAPI.swift in Sources */,
+				190973B72B27812700815F17 /* ImageModel.swift in Sources */,
 				19D17DA72B1FA577001526A6 /* WallpaperManager.swift in Sources */,
+				197CF38D2B262416008A5DA0 /* LocalStorage.swift in Sources */,
 				19D17D7B2B1FA279001526A6 /* ContentView.swift in Sources */,
+				199CE5E12B2A2B9F007819FC /* Helper.swift in Sources */,
 				19D17D7D2B1FA279001526A6 /* Item.swift in Sources */,
 				19D17D792B1FA279001526A6 /* ChandlerBingApp.swift in Sources */,
+				197CF3902B262C87008A5DA0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = ChandlerBing/ChandlerBing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -445,6 +506,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,6 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = ChandlerBing/ChandlerBing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -473,6 +536,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

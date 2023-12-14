@@ -19,11 +19,17 @@ struct ContentView: View {
                     NavigationLink {
                         VStack {
                             Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                            Text("Hello")
+                            
                             Button(action: {
-                                BingPictureManager().fetchLastWallpaper(atRegin: "IN")
+                                BingPictureManager().downloadData()
                             }) {
-                                Text("Download")
+                                Text("Download New")
+                            }
+                            
+                            Button(action: {
+                                LocalStorage().openCacheFolder()
+                            }) {
+                                Text("Open Cache Folder")
                             }
                         }
                     } label: {
